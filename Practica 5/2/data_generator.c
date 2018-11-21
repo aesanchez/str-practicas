@@ -10,9 +10,9 @@ float temp = 88.5;
 
 int main()
 {
-    file = fopen("sensor_file", "w");
+    file = fopen("sensor_values", "w");
 
-    n = 100;
+    n = 1000;
 
     srand((unsigned)time(&t));
 
@@ -25,7 +25,6 @@ int main()
             fprintf(file, "%d\t%.2f", rand() % 5000000, temp);
     }
     fclose(file);
-    //patch
 
     return (0);
 }
